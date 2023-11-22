@@ -41,17 +41,17 @@ export default function Logo({
   }
   const text = (
     <div className="flex-col justify-center items-start inline-flex">
-      <div className="text-lg lg:text-xl font-light leading-tight text-slate-600">
+      <div className="text-lg mdtext-xl font-light leading-tight text-slate-600">
         Gwinnett
       </div>
-      <div className="text-lg lg:text-xl font-black leading-tight text-primary-1-500">
+      <div className="text-lg mdtext-xl font-black leading-tight text-primary-1-500">
         Ecos
       </div>
     </div>
   );
   return (
     <div
-      className="flex items-center justify-center gap-2.5 lg:gap-1.5"
+      className="flex items-center justify-center gap-2.5 mdgap-1.5"
       {...props}
     >
       {logo}
