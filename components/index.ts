@@ -5,3 +5,4 @@ export type { ButtonProps } from "./Button/Button";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as Marker } from "./Navbar/Marker";
 export type { MarkerProps } from "./Navbar/Marker";
+export { default as Hero } from "./Hero/Hero";
