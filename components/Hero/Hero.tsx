@@ -18,7 +18,7 @@ export default function Hero() {
     "text-4xl lg:text-5xl font-extrabold leading-snug lg:leading-tight";
 
   const content = (
-    <div className="w-full lg:w-1/2 flex flex-col justify-start items-start gap-4 max-w-md">
+    <div className="w-full lg:w-1/2 flex flex-col justify-start items-start gap-4 max-w-xl">
       <div className="text-left">
         <span className={`text-primary-1-500 ${textClass}`}>
           Environmental Conservation
