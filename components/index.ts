@@ -1,10 +1,13 @@
-export { default as Logo } from "./Logo/Logo";
-export type { LogoProps } from "./Logo/Logo";
+export { default as Banner } from "./Banner/Banner";
 export { default as Button } from "./Button/Button";
 export type { ButtonProps } from "./Button/Button";
-export { default as Navbar } from "./Navbar/Navbar";
+export { default as EventCard } from "./EventCard/EventCard";
+export type { EventCardProps } from "./EventCard/EventCard";
+export { default as Hero } from "./Hero/Hero";
+export { default as Logo } from "./Logo/Logo";
+export type { LogoProps } from "./Logo/Logo";
 export { default as Marker } from "./Navbar/Marker";
 export type { MarkerProps } from "./Navbar/Marker";
-export { default as Hero } from "./Hero/Hero";
+export { default as Navbar } from "./Navbar/Navbar";
 export { default as Timeline } from "./Timeline/Timeline";
-export { default as Banner } from "./Banner/Banner";
+
