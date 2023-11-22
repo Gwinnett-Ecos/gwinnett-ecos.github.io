@@ -106,6 +106,9 @@ useEffect(() => {
   const handleScroll = () => {
     setVisible(window.scrollY < lastScrollY);
     lastScrollY = window.scrollY;
+    if (window.scrollY <= 75) {
+      setVisible(true);
+    }
   };
   window.addEventListener("scroll", handleScroll, { passive: true });
   return () => window.removeEventListener("scroll", handleScroll);
