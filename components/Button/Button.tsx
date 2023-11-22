@@ -4,7 +4,7 @@ export type ButtonProps = {
   children?: React.ReactNode;
   text?: string;
   variant?: "filled" | "secondary";
-  color: string;
+  color?: string;
   className?: string;
   props?: React.HTMLProps<HTMLButtonElement>;
 };
@@ -33,7 +33,7 @@ export default function Button({
   }`;
 
   return (
-    <div
+    <button
       className={`px-4 py-2 ${buttonClass} ${className} rounded-full`}
       {...props}
     >
@@ -43,6 +43,6 @@ export default function Button({
         </span>
       )}
       {children}
-    </div>
+    </button>
   );
 }
