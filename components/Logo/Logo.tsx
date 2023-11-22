@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export type LogoProps = {
   className?: string;
-  variant: "logo-only" | "logo-and-text";
+  variant?: "logo-only" | "logo-and-text";
   props?: React.HTMLProps<HTMLDivElement>;
 };
 
