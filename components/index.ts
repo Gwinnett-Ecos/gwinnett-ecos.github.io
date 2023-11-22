@@ -7,3 +7,4 @@ export { default as Marker } from "./Navbar/Marker";
 export type { MarkerProps } from "./Navbar/Marker";
 export { default as Hero } from "./Hero/Hero";
 export { default as Timeline } from "./Timeline/Timeline";
+export { default as Banner } from "./Banner/Banner";
