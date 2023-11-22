@@ -154,7 +154,7 @@ return (
     ref={navbarRef}
     className={`fixed top-0 left-0 right-0 bg-white shadow-sm z-50 transition-transform ease-in-out ${
       visible ? "translate-y-0" : "-translate-y-full"
-    } flex items-center justify-between sm:justify-normal sm:gap-16 px-2 sm:px-4`}
+    } flex items-center justify-between sm:justify-normal sm:gap-16 px-2 sm:px-4 md:px-12 md:py-4`}
   >
     <Logo className="flex-none" variant="logo-and-text" />
     <NavbarDesktop
