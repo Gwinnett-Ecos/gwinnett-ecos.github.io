@@ -13,19 +13,18 @@ export type EventsProps = {
 export default function Events({
   events,
   className,
-  spaceBetween = 24,
+  spaceBetween = 16,
 }: EventsProps) {
   return (
     <Swiper
       className={className}
       spaceBetween={spaceBetween}
-      slidesPerView={1}
+      slidesPerView={2}
+      direction="vertical"
       breakpoints={{
-        640: {
-          slidesPerView: 2,
-        },
         1024: {
           slidesPerView: 2,
+          direction: "horizontal",
         },
       }}
     >

@@ -15,8 +15,8 @@ export default function EventCard({
   moreInformation,
 }: EventCardProps) {
   return (
-    <div className="w-80 md:w-[280px] md:h-[386px] p-8 bg-white rounded-2xl shadow border border-primary-2-200 flex-col justify-start items-start gap-4 inline-flex">
-      <div className="self-stretch text-primary-2-400 text-base font-semibold lg:text-[28px] lg:font-extrabold leading-[42px]">
+    <div className="w-80 lg:w-[280px] p-4 lg:p-8 bg-white rounded-2xl shadow border border-primary-2-200 flex-col justify-start items-start gap-1 lg:gap-4 inline-flex">
+      <div className="self-stretch text-primary-2-400 text-lg font-semibold lg:text-[28px] lg:font-extrabold leading-[42px]">
         {title}
       </div>
       <div className="self-stretch text-slate-500 text-xs lg:text-base leading-relaxed">
