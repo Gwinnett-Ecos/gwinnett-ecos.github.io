@@ -176,7 +176,7 @@ return (
       onClick={() => setExpanded(!expanded)}
     >
       <span className="material-symbols-rounded w-6 h-6">
-        {expanded ? "close" : "menu"}
+        {expanded ? "menu_open" : "menu"}
       </span>
     </button>
   </nav>
