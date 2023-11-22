@@ -15,23 +15,23 @@ function TimelineMarker({
     throw Error(`Invalid direction: ${direction}. Must be "left" or "right"`);
   }
   const monthComponent = (
-    <div className="w-[72px] h-3 justify-end items-center gap-2.5 flex">
+    <div className="w-[72px] md:w-28 h-3 justify-end items-center gap-2.5 flex flex-shrink-0">
       <span className="text-primary-1-600 text-xs font-bold leading-3 md:text-2xl">
         {month}
       </span>
     </div>
   );
   const textComponent = (
-    <div className="w-56 h-4 md:h-8 flex-col justify-start items-start gap-0.5 inline-flex">
+    <div className="w-48 md:w-64 h-6 md:h-8 flex-col justify-start items-start gap-0.5 inline-flex flex-shrink-0">
       <div
-        className={`w-[158px] text-primary-1-500 text-lg font-extrabold leading-[18px] ${
+        className={`text-primary-1-500 text-lg font-extrabold leading-relaxed ${
           direction === "right" && "text-right"
         } md:text-2xl`}
       >
         {title}
       </div>
       <div
-        className={`self-stretch text-slate-500 text-xs font-normal leading-normal md:text-base ${
+        className={`self-stretch text-slate-500 text-xs font-normal leading-relaxed md:text-base ${
           direction === "right" && "text-right"
         }`}
       >
@@ -48,7 +48,7 @@ function TimelineMarker({
 
   return (
     <div
-      className={`w-[72px] md:w-[152px] h-1.5 md:h-3 ${
+      className={`w-[158px] md:w-[260px] h-1.5 md:h-3 ${
         direction === "left" ? "justify-start" : "justify-end"
       } items-center gap-1 md:gap-3 inline-flex`}
     >
@@ -123,10 +123,9 @@ type ConnectorProps = {
 function Connector({ length }: ConnectorProps) {
   return (
     <div
-      className={`w-0.5 origin-top-left border bg-primary-1-400`}
-      style={{
-        height: `${length}px`,
-      }}
+      className={`w-0.5 origin-top-left border bg-primary-1-400 h-[${length}px] md:h-[${
+        length * 1.5
+      }px]`}
     >
       <div className="pulse-gradient"></div>
     </div>
@@ -142,7 +141,7 @@ type TimelineProps = {
 function Timeline({ content: children, className, ...props }: TimelineProps) {
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-4 md:gap-6 ${className}`}
+      className={`flex flex-col items-center gap-4 md:gap-6 ${className} w-min mr-auto md:w-full`}
       {...props}
     >
       {children.map((child, index) => {

@@ -10,7 +10,7 @@ export type BannerProps = {
 function BannerDesktop({ title, children, className }: BannerProps) {
   return (
     <div
-      className={`w-[100vw] md:-translate-x-[calc((100vw-1024px+3rem)/2)] flex flex-col justify-center items-center gap-4 py-12 bg-primary-1-100 z-10 ${className}`}
+      className={`w-[100vw] md:relative md:-translate-x-[calc((100vw-100%+3rem)/2)] lg:-translate-x-[calc((100vw-1024px+3rem)/2)] flex flex-col justify-center items-center gap-4 py-12 bg-primary-1-100 z-10 ${className}`}
     >
       <div className="max-w-2xl h-auto flex-col justify-start items-start gap-3 inline-flex">
         <div className="self-stretch text-center text-lime-500 text-4xl font-extrabold leading-snug">
@@ -42,10 +42,10 @@ function BannerMobile({ title, children, className }: BannerProps) {
 export default function Banner(props: BannerProps) {
   return (
     <>
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <BannerDesktop {...props} />
       </div>
-      <div className="flex lg:hidden">
+      <div className="flex md:hidden">
         <BannerMobile {...props} />
       </div>
     </>
