@@ -49,7 +49,7 @@ export default function Hero() {
   );
 
   return (
-    <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-4 lg:justify-between mt-12 md:mt-[max(10vw,8rem)]">
+    <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-4 lg:justify-between mt-24 md:mt-[max(10vw,8rem)]">
       {image}
       {content}
     </div>
