@@ -15,7 +15,7 @@ function TimelineMarker({
     throw Error(`Invalid direction: ${direction}. Must be "left" or "right"`);
   }
   const monthComponent = (
-    <div className="w-[51px] h-3 justify-end items-center gap-2.5 flex">
+    <div className="w-[72px] h-3 justify-end items-center gap-2.5 flex">
       <span className="text-primary-1-600 text-xs font-bold leading-3 md:text-2xl">
         {month}
       </span>
@@ -48,7 +48,7 @@ function TimelineMarker({
 
   return (
     <div
-      className={`w-[72px] md:w-[138px] h-1.5 md:h-3 ${
+      className={`w-[72px] md:w-[152px] h-1.5 md:h-3 ${
         direction === "left" ? "justify-start" : "justify-end"
       } items-center gap-1 md:gap-3 inline-flex`}
     >
