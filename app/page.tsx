@@ -104,28 +104,9 @@ export default function Home() {
                 className="flex-shrink flex-grow w-80 h-96 lg:h-auto lg:w-auto"
                 events={[
                   {
-                    title: "September 1, GEcos Launch",
-                    description:
-                      "GEcos is officially launched! We are excited to connect students in all Gwinnett County environmental clubs.",
-                    link: "https://www.google.com",
-                  },
-                  {
-                    title: "September 1, GEcos Launch",
-                    description:
-                      "GEcos is officially launched! We are excited to connect students in all Gwinnett County environmental clubs.",
-                    link: "https://www.google.com",
-                  },
-                  {
-                    title: "September 1, GEcos Launch",
-                    description:
-                      "GEcos is officially launched! We are excited to connect students in all Gwinnett County environmental clubs.",
-                    link: "https://www.google.com",
-                  },
-                  {
-                    title: "September 1, GEcos Launch",
-                    description:
-                      "GEcos is officially launched! We are excited to connect students in all Gwinnett County environmental clubs.",
-                    link: "https://www.google.com",
+                    title: "Tentative Discovery Presentation",
+                    description: "Present in Discovery HS about Gwinnett Ecos",
+                    link: "/",
                   },
                 ]}
               />
