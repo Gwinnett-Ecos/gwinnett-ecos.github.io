@@ -1,12 +1,4 @@
-import {
-  Calendar,
-  Events,
-  Hero,
-  Marker,
-  Team,
-  TeamCard,
-  TixieHero,
-} from "@/components";
+import { Calendar, Events, Hero, Marker, Team, TixieHero } from "@/components";
 import BannerDesktop from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
 import Timeline from "@/components/Timeline/Timeline";
