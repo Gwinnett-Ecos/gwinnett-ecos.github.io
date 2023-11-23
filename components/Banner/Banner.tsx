@@ -13,7 +13,7 @@ function BannerDesktop({ title, children, className }: BannerProps) {
       className={`w-[100vw] md:relative md:-translate-x-[calc((100vw-100%+3rem)/2)] lg:-translate-x-[calc((100vw-1024px+3rem)/2)] flex flex-col justify-center items-center gap-4 py-12 bg-primary-1-100 z-10 ${className}`}
     >
       <div className="max-w-2xl h-auto flex-col justify-start items-start gap-3 inline-flex">
-        <div className="self-stretch text-center text-lime-500 text-4xl font-extrabold leading-snug">
+        <div className="self-stretch text-center text-primary-1-500 text-4xl font-extrabold leading-snug">
           {title}
         </div>
         <div className="self-stretch text-center">{children}</div>
@@ -25,7 +25,7 @@ function BannerDesktop({ title, children, className }: BannerProps) {
 function BannerMobile({ title, children, className }: BannerProps) {
   return (
     <div
-      className={`"w-full h-auto px-4 py-2 border-t border-b border-lime-500 justify-center items-center gap-2.5 inline-flex" ${className}`}
+      className={`"w-full h-auto px-4 py-2 border-t border-b border-primary-1-500 justify-center items-center gap-2.5 inline-flex" ${className}`}
     >
       <div className="grow shrink basis-0">
         <span className="text-slate-600 text-sm font-bold font-['Inter'] leading-7">
