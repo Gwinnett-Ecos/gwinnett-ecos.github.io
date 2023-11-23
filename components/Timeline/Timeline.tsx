@@ -1,8 +1,17 @@
+"use client";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+
 type TimelineMarkerProps = {
   month: string;
   title: string;
   description: string;
   direction?: "left" | "right";
+};
+
+const fadeIn = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, y: 50 },
 };
 
 function TimelineMarker({
@@ -14,6 +23,9 @@ function TimelineMarker({
   if (direction !== "left" && direction !== "right") {
     throw Error(`Invalid direction: ${direction}. Must be "left" or "right"`);
   }
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const monthComponent = (
     <div className="w-[72px] md:w-28 h-3 justify-end items-center gap-2.5 flex flex-shrink-0">
       <span className="text-primary-1-600 text-xs font-bold leading-3 md:text-2xl">
@@ -47,27 +59,34 @@ function TimelineMarker({
   );
 
   return (
-    <div
-      className={`w-[158px] md:w-[260px] h-1.5 md:h-3 ${
-        direction === "left" ? "justify-start" : "justify-end"
-      } items-center gap-1 md:gap-3 inline-flex`}
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={fadeIn}
     >
-      {direction === "left" ? (
-        <>
-          {monthComponent}
-          {markerComponent}
-          {connectorComponent}
-          {textComponent}
-        </>
-      ) : (
-        <>
-          {textComponent}
-          {connectorComponent}
-          {markerComponent}
-          {monthComponent}
-        </>
-      )}
-    </div>
+      <div
+        className={`w-[158px] md:w-[260px] h-1.5 md:h-3 ${
+          direction === "left" ? "justify-start" : "justify-end"
+        } items-center gap-1 md:gap-3 inline-flex`}
+      >
+        {direction === "left" ? (
+          <>
+            {monthComponent}
+            {markerComponent}
+            {connectorComponent}
+            {textComponent}
+          </>
+        ) : (
+          <>
+            {textComponent}
+            {connectorComponent}
+            {markerComponent}
+            {monthComponent}
+          </>
+        )}
+      </div>
+    </motion.div>
   );
 }
 
@@ -92,6 +111,10 @@ const checkRoadmapProps = ({ variant, year }: RoadmapProps) => {
 
 function Roadmap({ variant, year }: RoadmapProps) {
   checkRoadmapProps({ variant, year });
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const content = {
     year: () => (
       <div className="text-center text-primary-1-800 text-[11px] font-bold md:text-xl md:font-extrabold">
@@ -110,9 +133,16 @@ function Roadmap({ variant, year }: RoadmapProps) {
     ),
   };
   return (
-    <div className="w-12 h-12 md:w-16 md:h-16 bg-primary-1-100 rounded-full flex-shrink-0 flex items-center justify-center">
-      {content[variant]()}
-    </div>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={fadeIn}
+    >
+      <div className="w-12 h-12 md:w-16 md:h-16 bg-primary-1-100 rounded-full flex-shrink-0 flex items-center justify-center">
+        {content[variant]()}
+      </div>
+    </motion.div>
   );
 }
 
@@ -121,14 +151,19 @@ type ConnectorProps = {
 };
 
 function Connector({ length }: ConnectorProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div
-      className={`w-0.5 origin-top-left border bg-primary-1-400 h-[${length}px] md:h-[${
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className={`w-0.5 origin-top-left border bg-primary-1-400 border-none h-[${length}px] md:h-[${
         length * 1.5
       }px]`}
-    >
-      <div className="pulse-gradient"></div>
-    </div>
+    />
   );
 }
 
@@ -145,17 +180,18 @@ function Timeline({ content: children, className, ...props }: TimelineProps) {
       {...props}
     >
       {children.map((child, index) => {
+        let Component;
         if ("month" in child) {
-          return <TimelineMarker key={index} {...child} />;
+          Component = TimelineMarker;
         } else if ("variant" in child) {
-          return <Roadmap key={index} {...child} />;
+          Component = Roadmap;
         } else {
-          return <Connector key={index} {...child} />;
+          Component = Connector;
         }
+        return <Component {...(child as any)} key={index} />;
       })}
     </div>
   );
 }
 
-Timeline.connect = (length: number) => ({ length });
 export default Timeline;
