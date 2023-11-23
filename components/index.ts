@@ -14,3 +14,5 @@ export { default as Navbar } from "./Navbar/Navbar";
 export { default as Timeline } from "./Timeline/Timeline";
 export { default as Calendar } from "./Calendar/Calendar";
 export { default as Footer } from "./Footer/Footer";
+export { default as TeamCard } from "./TeamCard/TeamCard";
+export { default as TixieHero } from "./TixieHero/TixieHero";
