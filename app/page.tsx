@@ -1,4 +1,12 @@
-import { Calendar, Events, Hero, Marker } from "@/components";
+import {
+  Calendar,
+  Events,
+  Hero,
+  Marker,
+  Team,
+  TeamCard,
+  TixieHero,
+} from "@/components";
 import BannerDesktop from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
 import Timeline from "@/components/Timeline/Timeline";
@@ -25,7 +33,7 @@ export default function Home() {
             <span className="text-slate-500 text-base font-bold leading-[30px]">
               {" "}
             </span>
-            <span className="text-lime-500 text-base font-bold leading-[30px]">
+            <span className="text-primary-1-500 text-base font-bold leading-[30px]">
               since 2022.
             </span>
           </BannerDesktop>
@@ -35,14 +43,14 @@ export default function Home() {
               { variant: "start" },
               // h-[10px]
               // md:h-[15px]
-              Timeline.connect(10),
+              { length: 10 },
               {
                 variant: "year",
                 year: "2022",
               },
               // h-[45px]
               // md:h-[67.5px]
-              Timeline.connect(45),
+              { length: 45 },
               {
                 title: "Conception",
                 description:
@@ -51,41 +59,41 @@ export default function Home() {
               },
               // h-[75px]
               // md:h-[112.5px]
-              Timeline.connect(75),
+              { length: 75 },
               {
                 variant: "year",
                 year: "2023",
               },
               // h-[100px]
               // md:h-[150px]
-              Timeline.connect(10),
+              { length: 10 },
               {
                 title: "High School Connection",
                 description:
                   "May 1st, 2023: Initiatives to connect high schoolers Lily and John at SCE meetings.",
                 month: "May",
               },
-              Timeline.connect(100),
+              { length: 100 },
               {
                 title: "Summer Planning",
                 description:
                   "Summer 2023: Government planning, officer recruitment, and school scheduling efforts took place.",
                 month: "Summer",
               },
-              Timeline.connect(100),
+              { length: 100 },
               {
                 title: "Core Committee Established",
                 description:
                   "Sep 1st, 2023: Formation of a core committee with members across Gwinnett County.",
                 month: "September",
               },
-              Timeline.connect(100),
+              { length: 100 },
               { variant: "upcoming" },
-              Timeline.connect(45),
+              { length: 45 },
             ]}
           />
         </section>
-        <section className="space-y-4 relative">
+        <section className="space-y-4 md:pb-6 lg:pb-16">
           <h1 className="text-primary-2-500">
             Upcoming Events
             <Marker title="Upcoming Events" icon="pages" id="events" />
@@ -173,7 +181,66 @@ export default function Home() {
             </svg>
           </div>
         </section>
-        <Marker title="Our Team" icon="communities" id="team" />
+        <section className="space-y-4">
+          <h1 className="max-w-4xl w-fill text-center text-primary-4-400 text-2xl md:text-4xl font-extrabold leading-snug">
+            We got an entire team dedicated to support a greener Gwinnett
+            <Marker title="Our Team" icon="communities" id="team" />
+          </h1>
+          <TixieHero />
+          <Team
+            team={[
+              {
+                name: "Tanya Nguyen",
+                position: "Communication Head",
+                image: "/team/tanya.png",
+                description:
+                  "I’m a junior at South Gwinnett High School, and also their Environmental Club President! I spend time reading poetry, binging about every trending show, and enjoying nature in every way possible.",
+              },
+              {
+                name: "Isabella Garcia",
+                position: "Research Head",
+                image: "/team/isabella.png",
+                description:
+                  "I hope to major in chemical engineering. I’m super excited to be working with all of you this year and to teach my passion for research while also leaving a positive impact on our community.",
+              },
+              {
+                name: "Elizabeth Nguyen",
+                position: "Marketing Head",
+                image: "/team/elizabeth.png",
+                description:
+                  "I'm a senior at GSMST who isn’t afraid of hands-on activity, and is committed to learning and applying newly learned skills to help make an impact on the environment. As the marketing head of G-ECOS I'll be applying marketing skills to help promote and develop the future events and projects.",
+              },
+              {
+                name: "Theogracia Alese",
+                position: "Research Head",
+                image: "/team/theo.png",
+                description:
+                  "A senior at the Gwinnett School of Mathematics, Science, and Technology. Spends her time reading, playing the viola, playing the kalimba, making art, crocheting, baking, and/or sleeping.",
+              },
+              {
+                name: "Johnny Ho",
+                position: "Research Head",
+                image: "/team/johnny.png",
+                description:
+                  "I enjoy late-night walks, creating playlists on Spotify, and making people laugh. My favorite place to be is at the beach. Fun fact: I haven’t broken any bones in my body (yet.)",
+              },
+              {
+                name: "Malaika Crates",
+                position: "Communication Head",
+                image: "/team/malaika.png",
+                description:
+                  "I'm a senior at GSMST, passionate about making a positive impact on the environment. I enjoy going on walks in my neighborhood and listening to music, my favorite artist is Brent Faiyaz!",
+              },
+              {
+                name: "Keren Oh",
+                position: "Communication Head",
+                image: "/team/keren.png",
+                description:
+                  "I’m a Communication’s head for Gwinnett E-COS! I love taking my dogs with me to go hiking and reading science fiction in my free time, especially to relieve some stress!",
+              },
+            ]}
+          />
+        </section>
         <Footer />
       </main>
     </>
