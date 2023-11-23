@@ -9,7 +9,8 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      ...colors,
+      "slate": colors.slate,
+      "white": colors.white,
       "primary-1": {
         "100": "#e8f5ce",
         "200": "#d1eb9e",
