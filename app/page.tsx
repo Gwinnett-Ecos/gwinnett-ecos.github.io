@@ -116,7 +116,7 @@ export default function Home() {
               height="590"
               viewBox="0 0 919 590"
               fill="none"
-              className="absolute left-0 h-[432px] lg:h-auto overflow-visible"
+              className="max-w-full object-cover absolute left-0 h-[432px] lg:h-auto overflow-visible"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
