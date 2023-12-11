@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "..";
 import loveTheEarth from "./love-the-earth.png";
 import Image from "next/image";
@@ -40,9 +42,16 @@ export default function Hero() {
       <div className="flex flex-row justify-start items-start gap-2">
         {/* 
           NOTE: Tailwind bg-primary-3-500
-          TODO: add link to join us page
         */}
-        <Button variant="filled" color="primary-3" text="Join Us" />
+        <Button
+          variant="filled"
+          color="primary-3"
+          text="Join Us"
+          props={{
+            onClick: () =>
+              window.open("https://www.instagram.com/p/C0rwQ1oxXXA/", "_blank"),
+          }}
+        />
         <Button variant="secondary" text="Learn More" />
       </div>
     </div>

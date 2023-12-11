@@ -104,9 +104,9 @@ export default function Home() {
                 className="flex-shrink flex-grow w-80 h-96 lg:h-auto lg:w-auto"
                 events={[
                   {
-                    title: "Tentative Discovery Presentation",
-                    description: "Present in Discovery HS about Gwinnett Ecos",
-                    link: "/",
+                    title: "Board Meeting",
+                    description: "December 18, 2-4 PM. Gwinnett-ECOS presents our first-ever board meeting. All members from ecos and environmental clubs are welcome to join.",
+                    link: "https://www.instagram.com/p/C0rwQ1oxXXA/",
                   },
                 ]}
               />
@@ -163,6 +163,12 @@ export default function Home() {
           <Team
             team={[
               {
+                name: "John Huynh",
+                position: "President",
+                image: "/team/john.png",
+                description: "I'm the External President of G-ECOS. I love a good conversation (a.k.a. yapping), meeting new people, playing board games, hiking, business, working out, driving, music, movies, language learning (currently working on my Chinese), cooking, but more so eating, tech, sunny weather with wind, writing stories, etc. [Trying to hit a word count for this description LOL] "
+              },
+              {
                 name: "Tanya Nguyen",
                 position: "Communication Head",
                 image: "/team/tanya.png",
@@ -188,7 +194,7 @@ export default function Home() {
                 position: "Research Head",
                 image: "/team/theo.png",
                 description:
-                  "A senior at the Gwinnett School of Mathematics, Science, and Technology. Spends her time reading, playing the viola, playing the kalimba, making art, crocheting, baking, and/or sleeping.",
+                  "I’m a senior at GSMST who is passionate about preserving the beauty of our planet! I enjoy reading, making art, playing the viola, and binging shows in my free time",
               },
               {
                 name: "Johnny Ho",
