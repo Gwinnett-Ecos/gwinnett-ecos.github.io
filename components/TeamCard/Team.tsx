@@ -94,7 +94,7 @@ export default function Team({ team, className }: TeamProps) {
         className={`flex gap-4 h-auto py-6 overflow-y-visible overflow-x-auto snap-x snap-proximity ${className}`}
         ref={containerRef}
       >
-        {team.map((member, idx) => (
+        {team.map((member, _) => (
           <TeamCard
             {...member}
             key={member.name}

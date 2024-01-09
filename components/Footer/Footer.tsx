@@ -1,8 +1,12 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Logo } from "..";
 import InstagramIcon from "./InstagramIcon";
-import Link from "next/link";
+
+function year() {
+  return new Date().getFullYear();
+}
 
 export default function Footer() {
   const [items, setItems] = useState<
@@ -32,7 +36,7 @@ export default function Footer() {
             Making earth greener since 2022
           </div>
           <div className="text-primary-1-700 text-xs md:text-base font-normal leading-normal">
-            © 2023 The Gwinnett Ecos
+            {`© ${year()} The Gwinnett Ecos`}
           </div>
           <div className="justify-start items-center gap-0.5 inline-flex">
             <button
