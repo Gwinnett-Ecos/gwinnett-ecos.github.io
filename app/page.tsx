@@ -1,7 +1,8 @@
-import { Calendar, Events, Hero, Marker, Team, TixieHero } from "@/components";
+import { Calendar, Hero, Marker, Team } from "@/components";
 import BannerDesktop from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
 import Timeline from "@/components/Timeline/Timeline";
+import { TEAM_DATA } from "./team";
 
 export default function Home() {
   return (
@@ -46,7 +47,7 @@ export default function Home() {
               {
                 title: "Conception",
                 description:
-                  "Started in January 2023 with Lily under Gwinnett sponsorship. Guided by Ms. Tixie.",
+                  "4 GSMST students begin project development as part of their Junior Fellowship Experience under the guidance of Ms. Tixie",
                 month: "January",
               },
               // h-[75px]
@@ -62,7 +63,7 @@ export default function Home() {
               {
                 title: "High School Connection",
                 description:
-                  "May 1st, 2023: Initiatives to connect high schoolers Lily and John at SCE meetings.",
+                  "May 1st, 2023: GSMST students connected with other high schools in Gwinnett County to discuss the project.",
                 month: "May",
               },
               { length: 100 },
@@ -76,10 +77,16 @@ export default function Home() {
               {
                 title: "Core Committee Established",
                 description:
-                  "Sep 1st, 2023: Formation of a core committee with members across Gwinnett County.",
+                  "Sep 1st, 2023: The core committee was established, and the first meeting was held.",
                 month: "September",
               },
               { length: 100 },
+              {
+                title: "Core Committee Established",
+                description:
+                  "Novemember 1st, 2023: The core committee was established, and the first meeting was held.",
+                month: "September",
+              },
               { variant: "upcoming" },
               { length: 45 },
             ]}
@@ -100,16 +107,6 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center relative z-10 w-full max-w-full">
               <Calendar />
               {/* TODO: fix hardcode */}
-              <Events
-                className="flex-shrink flex-grow w-80 h-96 lg:h-auto lg:w-auto"
-                events={[
-                  {
-                    title: "Board Meeting",
-                    description: "December 18, 2-4 PM. Gwinnett-ECOS presents our first-ever board meeting. All members from ecos and environmental clubs are welcome to join.",
-                    link: "https://www.instagram.com/p/C0rwQ1oxXXA/",
-                  },
-                ]}
-              />
             </div>
             <svg
               width="919"
@@ -156,76 +153,10 @@ export default function Home() {
         </section>
         <section className="space-y-4">
           <h1 className="max-w-4xl w-fill text-center text-primary-4-400 text-2xl md:text-4xl font-extrabold leading-snug">
-            We got an entire team dedicated to support a greener Gwinnett
+            We have an entire team dedicated to supporting a greener Gwinnett
             <Marker title="Our Team" icon="communities" id="team" />
           </h1>
-          <TixieHero />
-          <Team
-            team={[
-              {
-                name: "John Huynh",
-                position: "President",
-                image: "/team/john.png",
-                description: "I'm the External President of G-ECOS. I love a good conversation (a.k.a. yapping), meeting new people, playing board games, hiking, business, working out, driving, music, movies, language learning (currently working on my Chinese), cooking, but more so eating, tech, sunny weather with wind, writing stories, etc. [Trying to hit a word count for this description LOL] "
-              },
-              {
-                name: "Tanya Nguyen",
-                position: "Communication Head",
-                image: "/team/tanya.png",
-                description:
-                  "I'm a junior at South Gwinnett High School, and also their Environmental Club President! I spend time reading poetry, binging about every trending show, and enjoying nature in every way possible.",
-              },
-              {
-                name: "Yubo Cao",
-                position: "Development Head",
-                image: "/team/yubo.png",
-                description:
-                  "I'm the development head at Gwinnett Ecos, and also vice president of the CS club. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
-              },
-              {
-                name: "Isabella Garcia",
-                position: "Research Head",
-                image: "/team/isabella.png",
-                description:
-                  "I hope to major in chemical engineering. I'm super excited to be working with all of you this year and to teach my passion for research while also leaving a positive impact on our community.",
-              },
-              {
-                name: "Elizabeth Nguyen",
-                position: "Marketing Head",
-                image: "/team/elizabeth.png",
-                description:
-                  "I'm a senior at GSMST who isn't afraid of hands-on activity, and is committed to learning and applying newly learned skills to help make an impact on the environment. As the marketing head of G-ECOS I'll be applying marketing skills to help promote and develop the future events and projects.",
-              },
-              {
-                name: "Theogracia Alese",
-                position: "Research Head",
-                image: "/team/theo.png",
-                description:
-                  "I'm a senior at GSMST who is passionate about preserving the beauty of our planet! I enjoy reading, making art, playing the viola, and binging shows in my free time",
-              },
-              {
-                name: "Johnny Ho",
-                position: "Research Head",
-                image: "/team/johnny.png",
-                description:
-                  "I enjoy late-night walks, creating playlists on Spotify, and making people laugh. My favorite place to be is at the beach. Fun fact: I haven't broken any bones in my body (yet.)",
-              },
-              {
-                name: "Malaika Crates",
-                position: "Communication Head",
-                image: "/team/malaika.png",
-                description:
-                  "I'm a senior at GSMST, passionate about making a positive impact on the environment. I enjoy going on walks in my neighborhood and listening to music, my favorite artist is Brent Faiyaz!",
-              },
-              {
-                name: "Keren Oh",
-                position: "Communication Head",
-                image: "/team/keren.png",
-                description:
-                  "I'm a Communication's head for Gwinnett E-COS! I love taking my dogs with me to go hiking and reading science fiction in my free time, especially to relieve some stress!",
-              },
-            ]}
-          />
+          <Team team={TEAM_DATA} />
         </section>
         <Footer />
       </main>

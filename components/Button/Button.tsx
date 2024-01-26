@@ -6,6 +6,7 @@ export type ButtonProps = {
   variant?: "filled" | "secondary";
   color?: string;
   className?: string;
+  onClick?: () => void;
   props?: React.HTMLProps<HTMLButtonElement>;
 };
 
@@ -14,6 +15,7 @@ export default function Button({
   text,
   color,
   variant = "filled",
+  onClick,
   className,
   ...props
 }: ButtonProps) {
@@ -35,6 +37,7 @@ export default function Button({
   return (
     <button
       className={`px-4 py-2 ${buttonClass} ${className} rounded-full`}
+      onClick={onClick}
       {...props}
     >
       {text && (

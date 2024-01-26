@@ -16,4 +16,3 @@ export { default as Navbar } from "./Navbar/Navbar";
 export { default as TeamCard } from "./TeamCard/TeamCard";
 export { default as Team } from "./TeamCard/Team";
 export { default as Timeline } from "./Timeline/Timeline";
-export { default as TixieHero } from "./TixieHero/TixieHero";

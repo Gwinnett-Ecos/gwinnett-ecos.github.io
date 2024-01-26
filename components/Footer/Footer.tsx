@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Logo } from "..";
@@ -33,10 +34,10 @@ export default function Footer() {
       <div className="self-stretch justify-start items-start inline-flex w-full max-w-5xl">
         <div className="grow shrink flex-col justify-start items-start inline-flex md:gap-2">
           <div className="text-primary-1-700 text-xs md:text-base font-normal leading-normal">
-            Making earth greener since 2022
+            Making earth greener since 2023
           </div>
           <div className="text-primary-1-700 text-xs md:text-base font-normal leading-normal">
-            {`© ${year()} The Gwinnett Ecos`}
+            {`© ${year()} The GECOS`}
           </div>
           <div className="justify-start items-center gap-0.5 inline-flex">
             <button
@@ -67,7 +68,22 @@ export default function Footer() {
             })}
           </div>
         </div>
-        <Logo />
+        <div className="flex flex-col gap-4 items-end">
+          <div className="flex gap-4 items-center ">
+            <Logo />
+            <span className="text-primary-3-500 text-xl">❤</span>
+            <Image
+              src="/gswcd.png"
+              height={192}
+              width={192}
+              alt="Logo of SWCD"
+              className="w-16 h-16"
+            />
+          </div>
+          <p className="max-w-xs text-primary-1-700 text-right">
+            Affiliated under Gwinnett Soil and Water Conservation District
+          </p>
+        </div>
       </div>
     </div>
   );

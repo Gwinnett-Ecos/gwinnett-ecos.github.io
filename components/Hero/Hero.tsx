@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "..";
 import loveTheEarth from "./love-the-earth.png";
 import Image from "next/image";
@@ -33,26 +34,44 @@ export default function Hero() {
         <span className={`text-primary-3-500 ${textClass}`}>Gwinnett</span>
       </div>
       <div className="text-slate-600 text-sm lg:text-lg font-normal leading-7 lg:leading-relaxed">
-        Our goal is to raise awareness about environmental issues in our
-        community by offering educational resources and opportunities for
-        hands-on conservation activities. Our hope is to inspire more high
-        school students to participate in environmental action and community
-        service.
+        The Gwinnett&rsquo;s Environmentally Concerned Organization of Students
+        aims to raise awareness about environmental issues in our community by
+        offering educational resources and opportunities for hands-on
+        conservation activities. Our hope is to inspire more high school
+        students to participate in environmental action and community service.
       </div>
       <div className="flex flex-row justify-start items-start gap-2">
-        {/* 
-          NOTE: Tailwind bg-primary-3-500
-        */}
+        <Link
+          href="https://www.instagram.com/p/C0rwQ1oxXXA/"
+          className="bg-primary-3-500 px-4 py-2.5 text-white rounded-full"
+        >
+          Join US
+        </Link>
         <Button
-          variant="filled"
-          color="primary-3"
-          text="Join Us"
-          props={{
-            onClick: () =>
-              window.open("https://www.instagram.com/p/C0rwQ1oxXXA/", "_blank"),
+          variant="secondary"
+          className="space-x-2"
+          onClick={() => {
+            document
+              .querySelector("section:nth-of-type(1)")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
-        />
-        <Button variant="secondary" text="Learn More" />
+        >
+          <span>Learn More</span>          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 animate-bounce"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+            />
+          </svg>
+        </Button>
       </div>
     </div>
   );

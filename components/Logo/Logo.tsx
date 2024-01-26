@@ -1,5 +1,5 @@
 import React from "react";
-import image from "./logo.png";
+import image from "@/public/logo.png";
 import Image from "next/image";
 
 export type LogoProps = {
@@ -30,7 +30,7 @@ export default function Logo({
     >
       <Image
         src={image}
-        alt="Gwinnett Ecos Logo"
+        alt="Gwinnett's Environemntally Concerned Organization of Students"
         width={53.87}
         height={43.51}
       />
@@ -41,11 +41,8 @@ export default function Logo({
   }
   const text = (
     <div className="flex-col justify-center items-start inline-flex">
-      <div className="text-lg mdtext-xl font-light leading-tight text-slate-600">
-        Gwinnett
-      </div>
       <div className="text-lg mdtext-xl font-black leading-tight text-primary-1-500">
-        Ecos
+        GECOS
       </div>
     </div>
   );

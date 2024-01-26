@@ -110,9 +110,9 @@ export default function TeamCard({
         onClick={toggle}
       ></div>
       <div
-        className={`flex-col flex flex-shrink-0 space-y-2 border border-slate-200 bg-white dark:bg-slate-700 shadow-sm rounded-lg cursor-pointer justify-start items-start transition-all ease-in-out duration-200 snap-centder ${f(
-          "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[60] max-sm:w-[75vw] px-8 py-8",
-          "w-64 h-196 px-6 p-4"
+        className={`flex flex-shrink-0 space-y-2 border border-slate-200 bg-white dark:bg-slate-700 shadow-sm rounded-lg cursor-pointer justify-start items-start transition-all ease-in-out duration-200 snap-centder ${f(
+          "fixed gap-8 flex-col items-center lg:flex-row top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[60] max-sm:w-[75vw] px-8 py-8",
+          "flex-col w-64 h-196 px-6 p-4"
         )} ${className}`}
         onClick={toggle}
       >
@@ -122,17 +122,17 @@ export default function TeamCard({
           height={196}
           alt={`Headshot of ${name}`}
           className={`${f(
-            "w-full h-64 object-cover object-top bg-slate-50 rounded-lg",
+            "w-64 h-64 object-cover object-top bg-slate-50 rounded-lg",
             "bg-slate-50 rounded-full mx-auto h-40 w-40 object-cover object-center"
           )} transition-all ease-in-out duration-200`}
         />
         <div>
           <h3 className="text-xl font-bold text-primary-4-800">{name}</h3>
           <h4 className="text-md font-semibold text-slate-400">{position}</h4>
+          <p className="text-md">
+            {f(description, shortDescription(description))}
+          </p>
         </div>
-        <p className="text-md">
-          {f(description, shortDescription(description))}
-        </p>
       </div>
     </>
   );
