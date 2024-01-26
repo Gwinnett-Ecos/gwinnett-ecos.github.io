@@ -90,17 +90,19 @@ export default function Team({ team, className }: TeamProps) {
     <div className="relative flex gap-2 items-center">
       {leftButton}
       {canScrollLeft && leftOverlay}
-      <div
-        className={`flex gap-4 h-auto py-6 overflow-y-visible overflow-x-auto snap-x snap-proximity ${className}`}
-        ref={containerRef}
-      >
-        {team.map((member, _) => (
-          <TeamCard
-            {...member}
-            key={member.name}
-            className="flex-shrink-0 snap-center"
-          />
-        ))}
+      <div className="overflow-hidden w-full">
+        <div
+          className={`flex gap-4 h-auto overflow-y-visible overflow-x-auto scroll-m-0 snap-x snap-proximity ${className} box-content no-scrollbar w-full h-full`}
+          ref={containerRef}
+        >
+          {team.map((member, _) => (
+            <TeamCard
+              {...member}
+              key={member.name}
+              className="flex-shrink-0 snap-center"
+            />
+          ))}
+        </div>
       </div>
       {canScrollRight && rightOverlay}
       {rightButton}

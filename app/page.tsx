@@ -2,12 +2,14 @@ import { Calendar, Hero, Marker, Team } from "@/components";
 import BannerDesktop from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
 import Timeline from "@/components/Timeline/Timeline";
-import { TEAM_DATA } from "./team";
+import Image from "next/image";
+import Link from "next/link";
+import { TEAM_DATA, TIMELINE_DATA } from "./data";
 
 export default function Home() {
   return (
     <>
-      <main className="px-6 md:px-18 max-w-xl md:max-w-5xl mx-auto space-y-8 sm:space-y-12 md:space-y-20">
+      <main className="px-6 md:px-18 max-w-xl md:max-w-5xl mx-auto space-y-12 md:space-y-20">
         <Hero />
         <section className="space-y-4">
           <h1 className="text-primary-1-500">
@@ -27,70 +29,35 @@ export default function Home() {
               {" "}
             </span>
             <span className="text-primary-1-500 text-base font-bold leading-[30px]">
-              since 2022.
+              since 2023.
             </span>
           </BannerDesktop>
           <Timeline
             // NOTE: declare Tailwind CSS class before use connect()
-            content={[
-              { variant: "start" },
-              // h-[10px]
-              // md:h-[15px]
-              { length: 10 },
-              {
-                variant: "year",
-                year: "2022",
-              },
-              // h-[45px]
-              // md:h-[67.5px]
-              { length: 45 },
-              {
-                title: "Conception",
-                description:
-                  "4 GSMST students begin project development as part of their Junior Fellowship Experience under the guidance of Ms. Tixie",
-                month: "January",
-              },
-              // h-[75px]
-              // md:h-[112.5px]
-              { length: 75 },
-              {
-                variant: "year",
-                year: "2023",
-              },
-              // h-[100px]
-              // md:h-[150px]
-              { length: 10 },
-              {
-                title: "High School Connection",
-                description:
-                  "May 1st, 2023: GSMST students connected with other high schools in Gwinnett County to discuss the project.",
-                month: "May",
-              },
-              { length: 100 },
-              {
-                title: "Summer Planning",
-                description:
-                  "Summer 2023: Government planning, officer recruitment, and school scheduling efforts took place.",
-                month: "Summer",
-              },
-              { length: 100 },
-              {
-                title: "Core Committee Established",
-                description:
-                  "Sep 1st, 2023: The core committee was established, and the first meeting was held.",
-                month: "September",
-              },
-              { length: 100 },
-              {
-                title: "Core Committee Established",
-                description:
-                  "Novemember 1st, 2023: The core committee was established, and the first meeting was held.",
-                month: "September",
-              },
-              { variant: "upcoming" },
-              { length: 45 },
-            ]}
+            content={TIMELINE_DATA as any}
           />
+          <BannerDesktop title={`Our Sponsor `}>
+            <span className="text-slate-500 text-base font-normal leading-[30px]">
+              We are proud to be sponsored by{" "}
+              <Link
+                href="https://gwinnettswcd.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-1-400 font-bold"
+              >
+                Gwinnett Soil and Water Conservation District
+              </Link>
+            </span>
+            <div className="flex flex-row flex-wrap justify-center mt-2">
+              <Image
+                src="/gswcd.png"
+                height={192}
+                width={192}
+                alt="Logo of SWCD"
+                className="w-16 h-16"
+              />
+            </div>
+          </BannerDesktop>
         </section>
         <section className="space-y-4 md:pb-6 lg:pb-16">
           <h1 className="text-primary-2-500">

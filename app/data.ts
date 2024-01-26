@@ -73,3 +73,62 @@ export const TEAM_DATA: TeamCardProps[] = [
       "I'm a Communication's head for Gwinnett E-COS! I love taking my dogs with me to go hiking and reading science fiction in my free time, especially to relieve some stress!",
   },
 ];
+
+export const TIMELINE_DATA = [
+  { variant: "start" },
+  // h-[10px]
+  // md:h-[15px]
+  { length: 10 },
+  {
+    variant: "year",
+    year: "2022",
+  },
+  // h-[45px]
+  // md:h-[67.5px]
+  { length: 45 },
+  {
+    title: "Conception",
+    description:
+      "4 GSMST students begin project development as part of their Junior Fellowship Experience under the guidance of Ms. Tixie",
+    month: "January",
+  },
+  // h-[75px]
+  // md:h-[112.5px]
+  { length: 75 },
+  {
+    variant: "year",
+    year: "2023",
+  },
+  // h-[100px]
+  // md:h-[150px]
+  { length: 10 },
+  {
+    title: "High School Connection",
+    description:
+      "May 1st, 2023: GSMST students connected with other high schools in Gwinnett County to discuss the project.",
+    month: "May",
+  },
+  { length: 100 },
+  {
+    title: "Summer Planning",
+    description:
+      "Summer 2023: Government planning, officer recruitment, and school scheduling efforts took place.",
+    month: "Summer",
+  },
+  { length: 100 },
+  {
+    title: "Core Committee Established",
+    description:
+      "Sep 1st, 2023: The core committee was established, and the first meeting was held.",
+    month: "September",
+  },
+  { length: 100 },
+  {
+    title: "Core Committee Established",
+    description:
+      "November 1st, 2023: The core committee was established, and the first meeting was held.",
+    month: "September",
+  },
+  { variant: "upcoming" },
+  { length: 45 },
+];

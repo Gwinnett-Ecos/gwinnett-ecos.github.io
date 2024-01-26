@@ -80,8 +80,8 @@ export default function Footer() {
               className="w-16 h-16"
             />
           </div>
-          <p className="max-w-xs text-primary-1-700 text-right">
-            Affiliated under Gwinnett Soil and Water Conservation District
+          <p className="max-w-xs text-primary-1-700 text-right text-xs md:text-base">
+            GECOS is sponsored by Gwinnett Soil and Water Conservation District
           </p>
         </div>
       </div>
