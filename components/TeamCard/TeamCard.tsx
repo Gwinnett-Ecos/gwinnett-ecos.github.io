@@ -110,7 +110,7 @@ export default function TeamCard({
         onClick={toggle}
       ></div>
       <div
-        className={`flex flex-shrink-0 space-y-2 border border-slate-200 bg-white dark:bg-slate-700 shadow-sm rounded-lg cursor-pointer justify-start items-start transition-all ease-in-out duration-200 snap-centder ${f(
+        className={`flex flex-shrink-0 space-y-2 border border-slate-200 bg-white shadow-sm rounded-lg cursor-pointer justify-start items-start transition-all ease-in-out duration-200 snap-centder ${f(
           "fixed gap-8 flex-col items-center lg:flex-row top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[60] max-sm:w-[75vw] px-8 py-8",
           "flex-col w-64 h-196 px-6 p-4"
         )} ${className}`}
