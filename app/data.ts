@@ -46,7 +46,7 @@ export const TEAM_DATA: TeamCardProps[] = [
   },
   {
     name: "Theogracia Alese",
-    position: "Research Head",
+    position: "Marketing Head",
     image: "/team/theo.webp",
     description:
       "I'm a senior at GSMST who is passionate about preserving the beauty of our planet! I enjoy reading, making art, playing the viola, and binging shows in my free time",
