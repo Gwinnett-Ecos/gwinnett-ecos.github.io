@@ -72,9 +72,12 @@ export default function Home() {
           <div className="h-6 lg:h-10"></div>
           <div className="flex gap-16 items-center">
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center relative z-10 w-full max-w-full">
-              <Calendar src="Z3dpbm5ldHQuZWNvc0BnbWFpbC5jb20" />
-              <Calendar src="52ebd54d0c4362fd80b9e152916d177f18451b340e53f6e0d268d20472030677" />
-              {/* TODO: fix hardcode */}
+              <iframe
+                src="https://calendar.google.com/calendar/embed?height=467&wkst=1&bgcolor=%23f6bf26&ctz=America%2FNew_York&src=NTJlYmQ1NGQwYzQzNjJmZDgwYjllMTUyOTE2ZDE3N2YxODQ1MWIzNDBlNTNmNmUwZDI2OGQyMDQ3MjAzMDY3N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73&showTitle=0&showNav=0&showTitle=0&showTabs=0"
+                height="467"
+                scrolling="no"
+                className="rounded-xl shadow-lg shadow-primary-2-200 flex-grow"
+              ></iframe>
             </div>
             <svg
               width="919"

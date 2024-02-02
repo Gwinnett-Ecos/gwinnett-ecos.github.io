@@ -1,7 +1,6 @@
 export { default as Banner } from "./Banner/Banner";
 export { default as Button } from "./Button/Button";
 export type { ButtonProps } from "./Button/Button";
-export { default as Calendar } from "./Calendar/Calendar";
 export { default as EventCard } from "./EventCard/EventCard";
 export type { EventCardProps } from "./EventCard/EventCard";
 export { default as Events } from "./EventCard/Events";
