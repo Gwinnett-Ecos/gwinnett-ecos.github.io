@@ -30,18 +30,18 @@ export const TEAM_DATA: TeamCardProps[] = [
       "I hope to major in chemical engineering. I'm super excited to be working with all of you this year and to teach my passion for research while also leaving a positive impact on our community.",
   },
   {
+    name: "Yubo Cao",
+    position: "Research Head",
+    image: "/team/yubo.webp",
+    description:
+      "I'm the research head at GECOS, and also vice president of the CS club. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
+  },
+  {
     name: "Tanya Nguyen",
     position: "Communication Head",
     image: "/team/tanya.webp",
     description:
       "I'm a junior at South Gwinnett High School, and also their Environmental Club President! I spend time reading poetry, binging about every trending show, and enjoying nature in every way possible.",
-  },
-  {
-    name: "Yubo Cao",
-    position: "Development Head",
-    image: "/team/yubo.webp",
-    description:
-      "I'm the development head at GECOS, and also vice president of the CS club. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
   },
   {
     name: "Elizabeth Nguyen",
@@ -145,15 +145,13 @@ export const TIMELINE_DATA = [
   { length: 100 },
   {
     title: "First Core Committee Meeting",
-    description:
-      "22th: The first meeting of the core committee was held.",
+    description: "22th: The first meeting of the core committee was held.",
     month: "September",
   },
   { length: 100 },
   {
     title: "GSMST Presentation",
-    description:
-      "29th: Presented at the GSMST Environmental Club meeting.",
+    description: "29th: Presented at the GSMST Environmental Club meeting.",
     month: "November",
   },
   { length: 100 },
@@ -171,8 +169,7 @@ export const TIMELINE_DATA = [
   { length: 10 },
   {
     title: "Broad Meeting",
-    description:
-      "4th: General broad meeting with all high schools involved.",
+    description: "4th: General broad meeting with all high schools involved.",
     month: "February",
   },
   { length: 75 },
