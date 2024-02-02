@@ -10,17 +10,24 @@ export const TEAM_DATA: TeamCardProps[] = [
   },
   {
     name: "John Huynh",
-    position: "President",
+    position: "Co-President",
     image: "/team/john.webp",
     description:
       "I'm the External President of G-ECOS. I love a good conversation (a.k.a. yapping), meeting new people, playing board games, hiking, business, working out, driving, music, movies, language learning (currently working on my Chinese), cooking, but more so eating, tech, sunny weather with wind, writing stories, etc. [Trying to hit a word count for this description LOL] ",
   },
   {
-    name: "Yubo Cao",
-    position: "Development Head",
-    image: "/team/yubo.webp",
+    name: "Lily Chen",
+    position: "Co-President",
+    image: "/team/lily.webp",
     description:
-      "I'm the development head at GECOS, and also vice president of the CS club. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
+      "I'm the Internal President of GECOS. I love to read, write, and draw. I am passionate about contributing to her immediate community! Before founding GECOS her favorite extracurricular was participating as a Lawrenceville legacy leader, and is a prospective environmental engineer! I'm passionate about the environment and I hope to make a positive impact on the world.",
+  },
+  {
+    name: "Isabella Garcia",
+    position: "Research Head",
+    image: "/team/isabella.webp",
+    description:
+      "I hope to major in chemical engineering. I'm super excited to be working with all of you this year and to teach my passion for research while also leaving a positive impact on our community.",
   },
   {
     name: "Tanya Nguyen",
@@ -29,13 +36,12 @@ export const TEAM_DATA: TeamCardProps[] = [
     description:
       "I'm a junior at South Gwinnett High School, and also their Environmental Club President! I spend time reading poetry, binging about every trending show, and enjoying nature in every way possible.",
   },
-
   {
-    name: "Isabella Garcia",
-    position: "Research Head",
-    image: "/team/isabella.webp",
+    name: "Yubo Cao",
+    position: "Development Head",
+    image: "/team/yubo.webp",
     description:
-      "I hope to major in chemical engineering. I'm super excited to be working with all of you this year and to teach my passion for research while also leaving a positive impact on our community.",
+      "I'm the development head at GECOS, and also vice president of the CS club. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
   },
   {
     name: "Elizabeth Nguyen",
