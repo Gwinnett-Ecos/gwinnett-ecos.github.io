@@ -38,7 +38,7 @@ export const TEAM_DATA: TeamCardProps[] = [
   },
   {
     name: "Tanya Nguyen",
-    position: "Communication Head",
+    position: "Marketing Head",
     image: "/team/tanya.webp",
     description:
       "I'm a junior at South Gwinnett High School, and also their Environmental Club President! I spend time reading poetry, binging about every trending show, and enjoying nature in every way possible.",
@@ -82,13 +82,13 @@ export const TEAM_DATA: TeamCardProps[] = [
 
 export const TIMELINE_DATA = [
   { variant: "start" },
-  // h-[10px]
-  // md:h-[15px]
   { length: 10 },
   {
     variant: "year",
-    year: "2022",
+    year: "2023",
   },
+  // h-[10px]
+  // md:h-[15px]
   // h-[45px]
   // md:h-[67.5px]
   { length: 45 },
@@ -100,14 +100,10 @@ export const TIMELINE_DATA = [
   },
   // h-[75px]
   // md:h-[112.5px]
-  { length: 75 },
-  {
-    variant: "year",
-    year: "2023",
-  },
+
   // h-[100px]
   // md:h-[150px]
-  { length: 10 },
+  { length: 100 },
   {
     title: "High School Connection",
     description:
