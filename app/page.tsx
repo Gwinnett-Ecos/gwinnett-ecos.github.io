@@ -11,11 +11,37 @@ export default function Home() {
     <>
       <main className="px-6 md:px-18 max-w-xl md:max-w-5xl mx-auto space-y-12 md:space-y-20">
         <Hero />
+        <BannerDesktop title={`Our Sponsor `}>
+          <span className="text-slate-500 text-base font-normal leading-[30px]">
+            We are proud to be sponsored by{" "}
+            <Link
+              href="https://gwinnettswcd.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-1-400 font-bold"
+            >
+              Gwinnett Soil and Water Conservation District
+            </Link>
+          </span>
+          <div className="flex flex-row flex-wrap justify-center mt-2">
+            <Image
+              src="/gswcd.png"
+              height={192}
+              width={192}
+              alt="Logo of SWCD"
+              className="w-16 h-16"
+            />
+          </div>
+        </BannerDesktop>
         <section className="space-y-4">
           <h1 className="text-primary-1-500">
             About Us
             <Marker title="About Us" icon="info" id="about" />
           </h1>
+          <Timeline
+            // NOTE: declare Tailwind CSS class before use connect()
+            content={TIMELINE_DATA as any}
+          />
           <BannerDesktop
             title={`“Connect students in all Gwinnett County environmental clubs” `}
           >
@@ -32,32 +58,6 @@ export default function Home() {
               since 2023.
             </span>
           </BannerDesktop>
-          <Timeline
-            // NOTE: declare Tailwind CSS class before use connect()
-            content={TIMELINE_DATA as any}
-          />
-          <BannerDesktop title={`Our Sponsor `}>
-            <span className="text-slate-500 text-base font-normal leading-[30px]">
-              We are proud to be sponsored by{" "}
-              <Link
-                href="https://gwinnettswcd.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-1-400 font-bold"
-              >
-                Gwinnett Soil and Water Conservation District
-              </Link>
-            </span>
-            <div className="flex flex-row flex-wrap justify-center mt-2">
-              <Image
-                src="/gswcd.png"
-                height={192}
-                width={192}
-                alt="Logo of SWCD"
-                className="w-16 h-16"
-              />
-            </div>
-          </BannerDesktop>
         </section>
         <section className="space-y-4 md:pb-6 lg:pb-16">
           <h1 className="text-primary-2-500">
@@ -72,7 +72,8 @@ export default function Home() {
           <div className="h-6 lg:h-10"></div>
           <div className="flex gap-16 items-center">
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center relative z-10 w-full max-w-full">
-              <Calendar />
+              <Calendar src="Z3dpbm5ldHQuZWNvc0BnbWFpbC5jb20" />
+              <Calendar src="52ebd54d0c4362fd80b9e152916d177f18451b340e53f6e0d268d20472030677" />
               {/* TODO: fix hardcode */}
             </div>
             <svg

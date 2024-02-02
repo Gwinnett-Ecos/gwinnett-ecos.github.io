@@ -1,7 +1,7 @@
-export default function Calendar() {
+export default function Calendar({ src }: { src: string }) {
   const desktopCalendar = (
     <iframe
-      src="https://calendar.google.com/calendar/embed?height=467&wkst=1&bgcolor=%23F6BF26&ctz=America%2FNew_York&showDate=1&showPrint=0&showCalendars=0&showNav=0&showTitle=0&showTabs=0&showTz=0&title=GEcos%20Calendar&src=Z3dpbm5ldHQuZWNvc0BnbWFpbC5jb20&color=%23795548"
+      src={`https://calendar.google.com/calendar/embed?height=467&wkst=1&bgcolor=%23F6BF26&ctz=America%2FNew_York&showDate=1&showPrint=0&showCalendars=0&showNav=0&showTitle=0&showTabs=0&showTz=0&title=GEcos%20Calendar&src=${src}&color=%23795548`}
       style={{
         borderWidth: 0,
       }}
@@ -12,7 +12,7 @@ export default function Calendar() {
   );
   const mobileCalendar = (
     <iframe
-      src="https://calendar.google.com/calendar/embed?height=321&wkst=1&bgcolor=%23F6BF26&ctz=America%2FNew_York&showDate=1&showPrint=0&showCalendars=0&showNav=0&showTitle=0&showTabs=0&showTz=0&title=GEcos%20Calendar&src=Z3dpbm5ldHQuZWNvc0BnbWFpbC5jb20&color=%23795548"
+      src={`https://calendar.google.com/calendar/embed?height=321&wkst=1&bgcolor=%23F6BF26&ctz=America%2FNew_York&showDate=1&showPrint=0&showCalendars=0&showNav=0&showTitle=0&showTabs=0&showTz=0&title=GEcos%20Calendar&src=${src}&color=%23795548`}
       style={{
         borderWidth: 0,
       }}
