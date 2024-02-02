@@ -143,6 +143,9 @@ export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
   }, [items_]);
 
   useEffect(() => {
+    if (items_ != undefined) {
+      return;
+    }
     if (typeof window !== "undefined") {
       const items: NavbarItemProps[] = [];
       document.querySelectorAll(selector).forEach((element) => {
@@ -154,7 +157,7 @@ export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
       });
       setItems(items);
     }
-  }, []);
+  }, [items_]);
 
   return (
     <nav
