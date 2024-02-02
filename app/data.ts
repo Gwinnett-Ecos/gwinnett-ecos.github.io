@@ -10,14 +10,14 @@ export const TEAM_DATA: TeamCardProps[] = [
   },
   {
     name: "John Huynh",
-    position: "Co-President",
+    position: "External President",
     image: "/team/john.webp",
     description:
       "I'm the External President of G-ECOS. I love a good conversation (a.k.a. yapping), meeting new people, playing board games, hiking, business, working out, driving, music, movies, language learning (currently working on my Chinese), cooking, but more so eating, tech, sunny weather with wind, writing stories, etc. [Trying to hit a word count for this description LOL] ",
   },
   {
     name: "Lily Chen",
-    position: "Co-President",
+    position: "Internal President",
     image: "/team/lily.webp",
     description:
       "I'm the Internal President of GECOS. I love to read, write, and draw. I am passionate about contributing to her immediate community! Before founding GECOS her favorite extracurricular was participating as a Lawrenceville legacy leader, and is a prospective environmental engineer! I'm passionate about the environment and I hope to make a positive impact on the world.",
