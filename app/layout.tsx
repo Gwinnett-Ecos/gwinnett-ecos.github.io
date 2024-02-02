@@ -1,4 +1,4 @@
-import { Navbar } from "@/components";
+import { ConstNavbar } from "@/components";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="max-w-full overflow-x-hidden scroll-smooth">
       <body className={`${inter.className} max-w-full overflow-x-hidden`}>
-        <Navbar />
+        <ConstNavbar />
         <div className={`w-[100vw] overflow-x-clip`}>{children}</div>
       </body>
     </html>

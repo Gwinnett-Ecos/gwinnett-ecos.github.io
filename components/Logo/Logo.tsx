@@ -48,7 +48,8 @@ export default function Logo({
   );
   return (
     <div
-      className="flex items-center justify-center gap-2.5 mdgap-1.5"
+      className="flex items-center justify-center gap-2.5 mdgap-1.5 cursor-pointer"
+      onClick={() => window.open("/", "_self")}
       {...props}
     >
       {logo}

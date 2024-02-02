@@ -93,10 +93,12 @@ function NavbarDesktop({ items }: { items: NavbarItemProps[] }) {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
   const [visible, setVisible] = useState(true);
   const [activeId, setActiveId] = useState("");
-  const [items, setItems] = useState<Omit<NavbarItemProps, "active">[]>([]);
+  const [items, setItems] = useState<Omit<NavbarItemProps, "active">[]>(
+    items_ || []
+  );
   const [expanded, setExpanded] = useState(false);
   const navbarRef = useRef(null);
 
@@ -116,6 +118,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (items_ != undefined) {
+      setItems(items_!!);
+      return;
+    }
     if (typeof window !== "undefined") {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -134,7 +140,7 @@ export default function Navbar() {
 
       return () => observer.disconnect();
     }
-  }, []);
+  }, [items_]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -181,5 +187,34 @@ export default function Navbar() {
         </span>
       </button>
     </nav>
+  );
+}
+
+export function ConstNavbar() {
+  return (
+    <Navbar
+      items_={[
+        {
+          text: "Home",
+          href: "/",
+          icon: "home",
+        },
+        {
+          text: "About Us",
+          href: "/about",
+          icon: "info",
+        },
+        {
+          text: "Upcoming Events",
+          href: "/events",
+          icon: "event",
+        },
+        {
+          text: "Our Team",
+          href: "/team",
+          icon: "group",
+        },
+      ]}
+    />
   );
 }

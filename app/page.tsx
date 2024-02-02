@@ -1,4 +1,4 @@
-import { Calendar, Hero, Marker, Team } from "@/components";
+import { Hero, Marker, Team } from "@/components";
 import BannerDesktop from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
 import Timeline from "@/components/Timeline/Timeline";
