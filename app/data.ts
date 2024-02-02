@@ -111,7 +111,7 @@ export const TIMELINE_DATA = [
   {
     title: "High School Connection",
     description:
-      "May 1st, 2023: GSMST students connected with other high schools in Gwinnett County to discuss the project.",
+      "May 1st: GSMST students connected with other high schools in Gwinnett County to discuss the project.",
     month: "May",
   },
   { length: 100 },
@@ -123,18 +123,59 @@ export const TIMELINE_DATA = [
   },
   { length: 100 },
   {
-    title: "Core Committee Established",
+    title: "Featured in Local Newspaper",
     description:
-      "Sep 1st, 2023: The core committee was established, and the first meeting was held.",
+      "September 6th: The Atlanta Journal-Constitution featured G-ECOS in their article.",
     month: "September",
   },
   { length: 100 },
   {
     title: "Core Committee Established",
     description:
-      "November 1st, 2023: The core committee was established, and the first meeting was held.",
+      "10th: The core committee was established, and the first meeting was held.",
     month: "September",
   },
+  { length: 100 },
+  {
+    title: "Archer High School Presentation",
+    description:
+      "13th: Presented at the Archer High School Environmental Club meeting.",
+    month: "September",
+  },
+  { length: 100 },
+  {
+    title: "First Core Committee Meeting",
+    description:
+      "22th: The first meeting of the core committee was held.",
+    month: "September",
+  },
+  { length: 100 },
+  {
+    title: "GSMST Presentation",
+    description:
+      "29th: Presented at the GSMST Environmental Club meeting.",
+    month: "November",
+  },
+  { length: 100 },
+  {
+    title: "GSMST Presentation",
+    description:
+      "18th: After gathering seven high schools (GSMST, Berkmar, Brookwood, GSMST, Mill Creek, Seckinger, South Gwinnett, and Discovery), the first meeting was held.",
+    month: "December",
+  },
+  { length: 100 },
+  {
+    variant: "year",
+    year: "2024",
+  },
+  { length: 10 },
+  {
+    title: "Broad Meeting",
+    description:
+      "4th: General broad meeting with all high schools involved.",
+    month: "February",
+  },
+  { length: 75 },
   { variant: "upcoming" },
   { length: 45 },
 ];
