@@ -6,7 +6,7 @@ export default function Events() {
       <main className="px-6 md:px-18 max-w-xl md:max-w-5xl mx-auto py-12 lg:py-24">
         <section className="space-y-4 my-12 mx-4 pb-12 md:pb-6 lg:pb-16">
           <h1 className="text-primary-2-500 mt-6">
-            Upcoming Events
+            Upcoming Opportunities
             <Marker title="Upcoming Events" icon="pages" id="events" />
           </h1>
           <p className="max-w-xl text-slate-500 text-lg font-normal">

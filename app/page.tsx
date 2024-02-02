@@ -61,7 +61,7 @@ export default function Home() {
         </section>
         <section className="space-y-4 md:pb-6 lg:pb-16">
           <h1 className="text-primary-2-500">
-            Upcoming Events
+            Upcoming Opportunities
             <Marker title="Upcoming Events" icon="pages" id="events" />
           </h1>
           <p className="max-w-xl text-slate-500 text-lg font-normal">

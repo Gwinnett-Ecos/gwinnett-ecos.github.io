@@ -208,7 +208,7 @@ export function ConstNavbar() {
           icon: "info",
         },
         {
-          text: "Upcoming Events",
+          text: "Upcoming Opportunities",
           href: "/events",
           icon: "event",
         },
