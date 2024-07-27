@@ -16,6 +16,12 @@ export const TEAM_DATA: TeamCardProps[] = [
       "I'm the Webmaster at GECOS. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
   },
   {
+    name: "Sonia Charaniya",
+    position: "Secretary",
+    image: "/team/sonia.png",
+    description: "As a senior at Brookwood High School and the secretary of GECOS, I am passionate about improving our community and making a positive impact on the environment. I enjoy activities including reading, spending time with friends, watching movies, running, wrestling, and baking. My goal is to leave a lasting, positive mark on the world while embracing my love for the outdoors and community involvement. I hope to enter the medical field and become a travel nurse!"
+  },
+  {
     name: "Tanya Nguyen",
     position: "Co-President",
     image: "/team/tanya.webp",
