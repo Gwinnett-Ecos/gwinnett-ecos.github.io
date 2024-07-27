@@ -9,74 +9,61 @@ export const TEAM_DATA: TeamCardProps[] = [
       "District educational outreach manager with our sponsoring organization, the Gwinnett Soil and Water Conservation District.",
   },
   {
-    name: "John Huynh",
-    position: "External President",
-    image: "/team/john.webp",
-    description:
-      "I'm the External President of G-ECOS. I love a good conversation (a.k.a. yapping), meeting new people, playing board games, hiking, business, working out, driving, music, movies, language learning (currently working on my Chinese), cooking, but more so eating, tech, sunny weather with wind, writing stories, etc. [Trying to hit a word count for this description LOL] ",
-  },
-  {
-    name: "Lily Chen",
-    position: "Internal President",
-    image: "/team/lily.webp",
-    description:
-      "I'm the Internal President of GECOS. I love to read, write, and draw. I am passionate about contributing to her immediate community! Before founding GECOS her favorite extracurricular was participating as a Lawrenceville legacy leader, and is a prospective environmental engineer! I'm passionate about the environment and I hope to make a positive impact on the world.",
-  },
-  {
-    name: "Isabella Garcia",
-    position: "Research Head",
-    image: "/team/isabella.webp",
-    description:
-      "I hope to major in chemical engineering. I'm super excited to be working with all of you this year and to teach my passion for research while also leaving a positive impact on our community.",
-  },
-  {
     name: "Yubo Cao",
-    position: "Research Head",
+    position: "Webmaster",
     image: "/team/yubo.webp",
     description:
-      "I'm the research head at GECOS, and also vice president of the CS club. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
+      "I'm the Webmaster at GECOS. I am passionate about the envrionment and technology, and I intend to create a positive impact on the world. I enjoy coding, creating ML models, developing website (including this one) in my free time.",
   },
   {
     name: "Tanya Nguyen",
-    position: "Marketing Head",
+    position: "Co-President",
     image: "/team/tanya.webp",
     description:
-      "I'm a junior at South Gwinnett High School, and also their Environmental Club President! I spend time reading poetry, binging about every trending show, and enjoying nature in every way possible.",
-  },
-  {
-    name: "Elizabeth Nguyen",
-    position: "Marketing Head",
-    image: "/team/elizabeth.webp",
-    description:
-      "I'm a senior at GSMST who isn't afraid of hands-on activity, and is committed to learning and applying newly learned skills to help make an impact on the environment. As the marketing head of G-ECOS I'll be applying marketing skills to help promote and develop the future events and projects.",
-  },
-  {
-    name: "Theogracia Alese",
-    position: "Marketing Head",
-    image: "/team/theo.webp",
-    description:
-      "I'm a senior at GSMST who is passionate about preserving the beauty of our planet! I enjoy reading, making art, playing the viola, and binging shows in my free time",
-  },
-  // {
-  //   name: "Johnny Ho",
-  //   position: "Research Head",
-  //   image: "/team/johnny.webp",
-  //   description:
-  //     "I enjoy late-night walks, creating playlists on Spotify, and making people laugh. My favorite place to be is at the beach. Fun fact: I haven't broken any bones in my body (yet.)",
-  // },
-  {
-    name: "Malaika Crates",
-    position: "Communication Head",
-    image: "/team/malaika.webp",
-    description:
-      "I'm a senior at GSMST, passionate about making a positive impact on the environment. I enjoy going on walks in my neighborhood and listening to music, my favorite artist is Brent Faiyaz!",
+      "Hi everyone! I’m Tanya, one of your presidents for G]ECOS! I enjoy reading, poetry, and anything nature! I’m so excited to elevate and make an impact this year!",
   },
   {
     name: "Keren Oh",
-    position: "Communication Head",
+    position: "Co-President",
     image: "/team/keren.webp",
     description:
-      "I'm a Communication's head for Gwinnett E-COS! I love taking my dogs with me to go hiking and reading science fiction in my free time, especially to relieve some stress!",
+      "I am a senior at the GSMST, invested in making environmental change a communal effort. I enjoy hands-on experiences and applying them to hopefully contribute to our community!",
+  },
+  {
+    name: "Ryan Shin",
+    position: "External Vice President",
+    image: "/team/ryan.png",
+    description:
+      "Hi! I am a rising senior at GSMST and am the External Vice President for Gwinnett E-COS!. I like playing the violin even though I’m bad and existentially observing nature whenever I can. ",
+  },
+  {
+    name: "Elliot Lee",
+    position: "Internal Vice President",
+    image: "/team/elliot.png",
+    description:
+      "My name is Elliot Lee and I'm a rising senior at GSMST. I love speaking. I’m involved in Debate, Student Council, and LOVE Mock Trial. I can’t wait for this upcoming year with GECOS!",
+  },
+  {
+    name: "Safaa Mohammed",
+    position: "Treasurer",
+    image: "/team/safaa.png",
+    description:
+      "Hi, I’m Safaa! I’m super excited to be GECOS’s treasurer this year and really make an impact on the environment. I’m a rising senior at Berkmar High School and I love skateboarding :) ",
+  },
+  {
+    name: "Emma Poblete",
+    position: "Historian",
+    image: "/team/emma.png",
+    description:
+      "I’m a senior at Brookwood High School. I want to make Gwinnett greener by promoting our wonderful volunteer and community outreach opportunities through social media. I cannot wait to involve as many people as possible to fulfill my and GECOS’s mission. ",
+  },
+  
+  {
+    name: "Isabella Garcia",
+    position: "Alumni",
+    image: "/team/isabella.webp",
+    description:
+      "I hope to major in chemical engineering. I'm super excited to be working with all of you this year and to teach my passion for research while also leaving a positive impact on our community.",
   },
 ];
 
@@ -167,6 +154,12 @@ export const TIMELINE_DATA = [
     title: "Broad Meeting",
     description: "4th: General broad meeting with all high schools involved.",
     month: "February",
+  },
+  { length: 100 },
+  {
+    title: "New-Officer Meeting",
+    description: "28th: New core officers team meeting.",
+    month: "June",
   },
   { length: 75 },
   { variant: "upcoming" },
