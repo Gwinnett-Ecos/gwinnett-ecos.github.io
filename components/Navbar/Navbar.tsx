@@ -2,11 +2,15 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "..";
+import { AiFillCalendar, AiFillHome, AiFillInfoCircle } from "react-icons/ai";
+import { RiTeamFill } from "react-icons/ri";
+import { MdMenuOpen, MdMenu } from "react-icons/md";
+import { IconType } from "react-icons";
 
 type NavbarItemProps = {
   text: string;
   href: string;
-  icon: string;
+  icon: IconType;
   active?: boolean;
 };
 
@@ -20,14 +24,14 @@ function NavbarMobile({
   setExpanded: (expanded: boolean) => void;
 }) {
   const NavbarItem = (items: NavbarItemProps) => {
-    const { icon, text, href, active } = items;
+    const { icon: Icon, text, href, active } = items;
     const iconComponent = (
       <div
-        className={`w-8 h-8 flex items-center justify-center material-symbols-rounded transition-all group-hover:material-symbols-filled ${
+        className={`w-8 h-8 flex items-center justify-center transition-all group-hover:text-primary-1-500 ${
           active ? "text-primary-1-500" : "text-slate-500"
         }`}
       >
-        {icon}
+        <Icon size={24} />
       </div>
     );
     const textComponent = (
@@ -54,11 +58,11 @@ function NavbarMobile({
   return (
     <>
       <div
-        className={`w-64 h-[100vh] bg-white rounded-tr-2xl rounded-br-2xl shadow ${
+        className={`h-[100vh] bg-white rounded-tr-2xl rounded-br-2xl shadow ${
           expanded ? "translate-x-0" : "-translate-x-full"
         } fixed top-0 left-0 z-50 transition-transform ease-in-out bg-slate-50 sm:hidden`}
       >
-        <div className="flex-col justify-start items-start gap-4 flex ml-12 mt-12">
+        <div className="flex-col justify-start items-start gap-4 flex mx-12 mt-12">
           {items.map(NavbarItem)}
         </div>
       </div>
@@ -74,7 +78,7 @@ function NavbarMobile({
 
 function NavbarDesktop({ items }: { items: NavbarItemProps[] }) {
   return (
-    <div className="items-center justify-between h-16 flex-grow hidden sm:flex max-w-md">
+    <div className="items-center justify-between h-16 flex-grow hidden sm:flex max-w-xl">
       {items.map((item: NavbarItemProps) => {
         const { text, href, active } = item;
         return (
@@ -97,7 +101,7 @@ export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
   const [visible, setVisible] = useState(true);
   const [activeId, setActiveId] = useState("");
   const [items, setItems] = useState<Omit<NavbarItemProps, "active">[]>(
-    items_ || []
+    items_ || [],
   );
   const [expanded, setExpanded] = useState(false);
   const navbarRef = useRef(null);
@@ -131,7 +135,7 @@ export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
             }
           });
         },
-        { rootMargin: "-50% 0px -50% 0px", threshold: 0.01 }
+        { rootMargin: "-50% 0px -50% 0px", threshold: 0.01 },
       );
 
       document
@@ -152,7 +156,7 @@ export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
         items.push({
           text: element.getAttribute("data-title")!!,
           href: `#${element.id}`,
-          icon: element.getAttribute("data-icon")!!,
+          icon: AiFillHome, // Replace appropriately based on data-icon
         });
       });
       setItems(items);
@@ -185,9 +189,7 @@ export default function Navbar({ items_ }: { items_?: NavbarItemProps[] }) {
         className="flex items-center justify-center sm:hidden w-12 h-12 cursor-pointer"
         onClick={() => setExpanded(!expanded)}
       >
-        <span className="material-symbols-rounded w-6 h-6">
-          {expanded ? "menu_open" : "menu"}
-        </span>
+        {expanded ? <MdMenuOpen size={24} /> : <MdMenu size={24} />}
       </button>
     </nav>
   );
@@ -200,22 +202,22 @@ export function ConstNavbar() {
         {
           text: "Home",
           href: "/",
-          icon: "home",
+          icon: AiFillHome,
         },
         {
           text: "About Us",
           href: "/about",
-          icon: "info",
+          icon: AiFillInfoCircle,
         },
         {
-          text: "Upcoming Opportunities",
-          href: "/events",
-          icon: "event",
+          text: "Our Impact",
+          href: "our-impact",
+          icon: AiFillCalendar,
         },
         {
           text: "Our Team",
           href: "/team",
-          icon: "group",
+          icon: RiTeamFill,
         },
       ]}
     />

@@ -23,7 +23,7 @@ function TimelineMarker({
   if (direction !== "left" && direction !== "right") {
     throw Error(`Invalid direction: ${direction}. Must be "left" or "right"`);
   }
-  const ref = useRef(null);
+  const ref = useRef<Element>(null);
   const isInView = useInView(ref, { once: true });
 
   const monthComponent = (
@@ -98,7 +98,7 @@ type RoadmapProps = {
 const checkRoadmapProps = ({ variant, year }: RoadmapProps) => {
   if (variant !== "upcoming" && variant !== "start" && variant !== "year") {
     throw Error(
-      `Invalid variant: ${variant}. Must be "upcoming", "start" or "year"`
+      `Invalid variant: ${variant}. Must be "upcoming", "start" or "year"`,
     );
   }
   if (variant === "year" && !year) {

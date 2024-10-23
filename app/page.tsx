@@ -129,7 +129,6 @@ export default function Home() {
           </h1>
           <Team team={TEAM_DATA} />
         </section>
-        <Footer />
       </main>
     </>
   );

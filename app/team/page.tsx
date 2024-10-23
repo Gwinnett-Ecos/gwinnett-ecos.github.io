@@ -13,7 +13,6 @@ export default function Events() {
           <Team team={TEAM_DATA} />
         </section>
         <div className="h-16 lg:h-24"></div>
-        <Footer />
       </main>
     </>
   );
