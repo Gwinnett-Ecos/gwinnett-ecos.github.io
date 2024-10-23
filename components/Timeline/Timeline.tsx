@@ -1,6 +1,6 @@
 "use client";
-import { motion, useInView } from "framer-motion";
-import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import React from "react";
 
 type TimelineMarkerProps = {
   month: string;
@@ -23,8 +23,6 @@ function TimelineMarker({
   if (direction !== "left" && direction !== "right") {
     throw Error(`Invalid direction: ${direction}. Must be "left" or "right"`);
   }
-  const ref = useRef<Element>(null);
-  const isInView = useInView(ref, { once: true });
 
   const monthComponent = (
     <div className="w-[72px] md:w-28 h-3 justify-end items-center gap-2.5 flex flex-shrink-0">
@@ -60,9 +58,9 @@ function TimelineMarker({
 
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: true }}
       variants={fadeIn}
     >
       <div
@@ -112,9 +110,6 @@ const checkRoadmapProps = ({ variant, year }: RoadmapProps) => {
 function Roadmap({ variant, year }: RoadmapProps) {
   checkRoadmapProps({ variant, year });
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   const content = {
     year: () => (
       <div className="text-center text-primary-1-800 text-[11px] font-bold md:text-xl md:font-extrabold">
@@ -134,9 +129,9 @@ function Roadmap({ variant, year }: RoadmapProps) {
   };
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: true }}
       variants={fadeIn}
     >
       <div className="w-12 h-12 md:w-16 md:h-16 bg-primary-1-100 rounded-full flex-shrink-0 flex items-center justify-center">
@@ -151,18 +146,17 @@ type ConnectorProps = {
 };
 
 function Connector({ length }: ConnectorProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: true }}
       variants={fadeIn}
-      className={`w-0.5 origin-top-left border bg-primary-1-400 border-none h-[${length}px] md:h-[${
-        length * 1.5
-      }px]`}
+      style={{
+        height: length * 2,
+        width: 2,
+        backgroundColor: "#e8f5ce",
+      }}
     />
   );
 }
