@@ -8,15 +8,14 @@ import "swiper/css";
 import { useState } from "react";
 import Modal from "react-modal";
 import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import SwiperCore from "swiper";
-import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 
-SwiperCore.use([Navigation]);
-
 export default function Events() {
+  SwiperCore.use([Navigation]);
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
