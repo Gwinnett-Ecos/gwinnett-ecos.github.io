@@ -28,13 +28,13 @@ export const TEAM_DATA: TeamCardProps[] = [
     description:
       "Hi everyone! I’m Tanya, one of your presidents for G]ECOS! I enjoy reading, poetry, and anything nature! I’m so excited to elevate and make an impact this year!",
   },
-  {
-    name: "Keren Oh",
-    position: "Co-President",
-    image: "/team/keren.webp",
-    description:
-      "I am a senior at the GSMST, invested in making environmental change a communal effort. I enjoy hands-on experiences and applying them to hopefully contribute to our community!",
-  },
+  // {
+  //   name: "Keren Oh",
+  //   position: "Co-President",
+  //   image: "/team/keren.webp",
+  //   description:
+  //     "I am a senior at the GSMST, invested in making environmental change a communal effort. I enjoy hands-on experiences and applying them to hopefully contribute to our community!",
+  // },
   {
     name: "Ryan Shin",
     position: "External Vice President",
@@ -166,6 +166,12 @@ export const TIMELINE_DATA = [
     title: "New-Officer Meeting",
     description: "28th: New core officers team meeting.",
     month: "June",
+  },
+  { length: 100 },
+  {
+    title: "Hurricane Helene Relief",
+    description: "1st: GECOS members volunteered to help with Hurricane Helene relief.",
+    month: "November",
   },
   { length: 75 },
   { variant: "upcoming" },

@@ -98,7 +98,7 @@ export default function Team({ team, className }: TeamProps) {
           {team.map((member, _) => (
             <TeamCard
               {...member}
-              key={member.name}
+              key={member.description}
               className="flex-shrink-0 snap-center"
             />
           ))}

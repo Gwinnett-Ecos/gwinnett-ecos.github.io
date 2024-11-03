@@ -1,4 +1,4 @@
-import { Footer, Marker, Team } from "@/components";
+import { Marker, Team } from "@/components";
 import { TEAM_DATA } from "../data";
 
 export default function Events() {
