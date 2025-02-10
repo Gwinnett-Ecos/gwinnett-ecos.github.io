@@ -2,7 +2,7 @@ import { TeamCardProps } from "@/components/TeamCard/TeamCard";
 
 export const TEAM_DATA: TeamCardProps[] = [
   {
-    name: "Tixie Fowloer",
+    name: "Tixie Fowler",
     position: "Sponsor",
     image: "/team/tixie.webp",
     description:
